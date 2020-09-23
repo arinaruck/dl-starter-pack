@@ -9,9 +9,9 @@ def get_requirements():
 
 
 setup(
-    name=...,
+    name=dl_lib,
     version="0.0.1",
-    author=...,
+    author=arinaruck,
     package_dir={"": "src"},
     packages=find_packages("src"),
     install_requires=get_requirements(),

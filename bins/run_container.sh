@@ -1,7 +1,7 @@
 #!/bin/bash
 
-image_name=...
-project_name=...
+image_name='dl_img'
+project_name='dl_hw'
 username=$(whoami)
 container_name=${username}-${image_name}
 
