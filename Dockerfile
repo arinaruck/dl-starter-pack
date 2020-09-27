@@ -36,3 +36,10 @@ RUN . ~/.bashrc && conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
 # Requirements
 COPY requirements.txt /root/requirements.txt
 RUN . ~/.bashrc && pip install -r /root/requirements.txt
+
+# Make new env
+COPY environment.yml /root/environment.yml
+RUN . ~/.bashrc && conda env create -f /root/environment.yml
+
+# Make RUN commands use the new env
+SHELL ["conda", "run", "-n", "dl_hw1", "/bin/bash/", "c"]
